@@ -6,7 +6,7 @@ int main(){
 int x;
 int y;
 int temp;
-scanf("%d%d\n",&x,&y);
+scanf("%d %d",&x,&y);
 if(x<0||y<0){
     return 0;
 }
@@ -15,29 +15,34 @@ if(y<x){
      y=x;
      x=temp;
 }
+printf("The Armstrong numbers are:");
 for (int i = x; i <= y; i++)
 {
     if(isArmstrong(i)==1){
-        printf("%d\n", i);
+        printf(" %d", i);
     }
 }
+printf("\n The Palindromes are:");
 for (int i = x; i <= y; i++)
 {
     if(isPalindrome(i)==1){
-        printf("%d\n", i);
+        printf(" %d", i);
     }
 }
+printf("\n The Prime numbers are:");
 for (int i = x; i <= y; i++)
 {
     if(isPrime(i)==1){
-        printf("%d\n", i);
+        printf(" %d", i);
     }
 }
+printf("\n The Strong numbers are:");
 for (int i = x; i <= y; i++)
 {
     if(isStrong(i)==1){
-        printf("%d\n", i);
+        printf(" %d", i);
     }
 }
+printf("\n");
     return 0;
 }
